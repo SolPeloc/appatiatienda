@@ -3,7 +3,6 @@ import { useFonts } from 'expo-font';
 import { ActivityIndicator, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import AppNavigator from './navegacion';
-
 export default function App() {
 const [loaded] = useFonts({
   "poppins-regular": require("../assets/fonts/Poppins-Regular.ttf"),
