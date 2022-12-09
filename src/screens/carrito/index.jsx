@@ -9,12 +9,12 @@ const Carrito = ({navigation}) =>{
        console.warn("borrar",id)
     }
     const renderItem = ({item}) =>(<ItemCarrito item = {item} borrar = {borrar}/>)
-
+    const keyExtractor = (item) => item.id.toString();
     return(
         <View style={styles.container}>
-          <FlatList
-            data={CARRITO}
-            renderItem={renderItem}/>  
+            <View style={styles.listaContenedor}> 
+               <FlatList data={CARRITO} renderItem={renderItem} style={styles.listaContenedor} keyExtractor={keyExtractor}/>  
+          </View>
             <View style={styles.pieContainer}>
                 <TouchableOpacity
                     style={styles.botonStyle} onPress={()=>NULL}>

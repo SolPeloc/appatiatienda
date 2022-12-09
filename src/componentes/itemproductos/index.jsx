@@ -10,10 +10,9 @@ const ItemProductos = ({item,seleccionado,color}) =>{
             style={styles.item}
             onPress={()=>seleccionado(item)}
             >
-                <Text style={styles.titulo}>{item.title}</Text>
+                <Text style={styles.titulo}>{item.titulo}</Text>
                     <View style={styles.detalleContainer}>
-                        <Text style={styles.precio}>${item.price}</Text>
-                        <Text style={styles.weight}>{item.weight}</Text>
+                        <Text style={styles.precio}>${item.precio}</Text>
                 </View>
         </TouchableOpacity>
     </View>

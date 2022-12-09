@@ -1,30 +1,21 @@
 export const CATEGORIAS = [
     {   id: 1,
-        title: 'Harinas Puras',
+        titulo: 'Remeras',
         color: '#C6CAED',
     },
     {    id: 2,
-        title: 'Harinas Integrales',
+        titulo: 'Jeans',
         color: '#ADA8BE',
     },
     {
         id: 3,
-        title: 'Harinas de Trigo',
+        titulo: 'Buzos',
         color: '#A28497',
     },
     {
         id: 4,
-        title: 'Harinas de Maíz',
+        titulo: 'Accesorios',
         color: '#8896AB',
     },
-    {
-        id: 5,
-        title: 'Harinas de Centeno',
-        color: '#C5D5E4',
-    },
-    {
-        id: 6,
-        title: 'Harinas de Cebada',
-        color: '#F0B5B3',
-    },
+    
 ]

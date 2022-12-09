@@ -11,7 +11,7 @@ const ItemCategorias = ({item, seleccionado}) =>{
                 style={ {...styles.contenidoContainer, backgroundColor: item.color}}
                 onPress={() => seleccionado(item)}>
             <View>
-                <Text style={styles.titulo}> {item.title}</Text>
+                <Text style={styles.titulo}> {item.titulo}</Text>
             </View>
            </TouchableOpacity >
         </View>

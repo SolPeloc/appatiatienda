@@ -10,7 +10,7 @@ const ItemCarrito = ({item, borrar}) => {
                     </View>
                 <View style={styles.contenidoContainer}>
                     <View style={styles.contenido}>
-                        <Text style={styles.cantidad}>{item.cantidad}</Text>
+                        <Text style={styles.cantidad}>cantidad: {item.cantidad}</Text>
                         <Text style={styles.precio}>${item.precio}</Text>
                     </View>
                     <TouchableOpacity onPress={()=>borrar(item.id)} >
