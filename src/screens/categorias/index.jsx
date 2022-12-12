@@ -1,11 +1,12 @@
 import React from "react";
 import { styles } from "./styles";
-import { View,Text, Button, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import{CATEGORIAS} from "../../constantes/data/index"
-import { COLORES } from "../../constantes/temas";
+import { useSelector } from "react-redux";
 import ItemCategorias from "../../componentes/itemcategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
 const Categorias = ({navigation}) =>{
+    const categorias = useSelector((state)=> state.categoria.categorias) 
     const seleccionado = (item) =>{
         navigation.navigate("Productos", {categoriaId:item.id,titulo: item.title,color: item.color } )
     }
@@ -15,7 +16,7 @@ const Categorias = ({navigation}) =>{
     return(
         <SafeAreaView style={styles.container}> 
             <FlatList
-                data={CATEGORIAS}
+                data={categorias}
                 renderItem={renderItem}
                 keyExtractor={item => item.id.toString()}
                 style={styles.listaContenedor}

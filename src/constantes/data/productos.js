@@ -5,6 +5,7 @@ export const PRODUCTOS = [
         titulo: 'Remera Su',
         descripcion: '100% algodón',
         precio: 2500,
+        imagen:require("../../../assets/imagenes/mujer-jean.png")
     },
     {
         id: 2,

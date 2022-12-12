@@ -3,6 +3,8 @@ import { useFonts } from 'expo-font';
 import { ActivityIndicator, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import AppNavigator from './navegacion';
+import { Provider } from 'react-redux';
+import store from './store';
 export default function App() {
 const [loaded] = useFonts({
   "poppins-regular": require("../assets/fonts/Poppins-Regular.ttf"),
@@ -16,7 +18,12 @@ if (!loaded){
     </View>
   )
 }
-  return <AppNavigator/>
+  return (
+        <Provider store={store}>
+          <AppNavigator/>
+        </Provider>
+
+   )
    
     
 } 

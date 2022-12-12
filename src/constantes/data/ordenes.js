@@ -24,9 +24,9 @@ export const ORDENES= [
                         ]
                     },
                     { 
-                        id: 1,
+                        id: 2,
                         fecha: 1605898400000,
-                        total: 10000,
+                        total: 20000,
                         artículos:
                         [ 
                                 {
