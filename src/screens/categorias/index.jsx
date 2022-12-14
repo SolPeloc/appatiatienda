@@ -2,13 +2,17 @@ import React from "react";
 import { styles } from "./styles";
 import { FlatList } from "react-native";
 import{CATEGORIAS} from "../../constantes/data/index"
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import ItemCategorias from "../../componentes/itemcategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { selecCategoria } from "../../store/acciones/";
 const Categorias = ({navigation}) =>{
+    const despachador = useDispatch()
     const categorias = useSelector((state)=> state.categoria.categorias) 
     const seleccionado = (item) =>{
-        navigation.navigate("Productos", {categoriaId:item.id,titulo: item.title,color: item.color } )
+        despachador(selecCategoria(item.id))
+   
+        navigation.navigate("Productos", {titulo: item.title } )
     }
     const renderItem = ({item}) =>(<ItemCategorias item={item} seleccionado={seleccionado}/>)
 

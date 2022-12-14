@@ -2,10 +2,12 @@ import React from "react";
 import { View,Text,Image } from "react-native";
 import { styles } from "./styles";
 import {CATEGORIAS, PRODUCTOS} from "../../constantes/data/"
-const Producto = ({navigation,route}) =>{
-    const {productoId} = route.params
-    const filtradoProducto = PRODUCTOS.find((producto) => producto.id === productoId)
-    const {titulo,precio,descripcion,imagen}= filtradoProducto || {}
+import { useSelector } from "react-redux";
+const Producto = ({navigation}) =>{
+    const producto = useSelector((state) => state.productos.productoSeleccionado)
+
+   
+    const {titulo,precio,descripcion,imagen}= producto || {}
         return (
             <View style={styles.container}>
                 <Image source={imagen} style={styles.imagen}/>
