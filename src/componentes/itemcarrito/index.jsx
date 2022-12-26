@@ -6,7 +6,7 @@ const ItemCarrito = ({item, borrar}) => {
     return(
         <View style={styles.container}>
                     <View style={styles.cabeceraContainer}>
-                        <Text style={styles.titulo}>{item.título}</Text>
+                        <Text style={styles.titulo}>{item.titulo}</Text>
                     </View>
                 <View style={styles.contenidoContainer}>
                     <View style={styles.contenido}>

@@ -1,7 +1,6 @@
 import React from "react";
 import { styles } from "./styles";
 import { FlatList } from "react-native";
-import{CATEGORIAS} from "../../constantes/data/index"
 import { useSelector,useDispatch } from "react-redux";
 import ItemCategorias from "../../componentes/itemcategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -15,8 +14,6 @@ const Categorias = ({navigation}) =>{
         navigation.navigate("Productos", {titulo: item.title } )
     }
     const renderItem = ({item}) =>(<ItemCategorias item={item} seleccionado={seleccionado}/>)
-
-    
     return(
         <SafeAreaView style={styles.container}> 
             <FlatList

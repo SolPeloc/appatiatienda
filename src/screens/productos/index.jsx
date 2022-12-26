@@ -1,7 +1,6 @@
 import React, {useEffect}from "react";
 import { styles } from "./styles";
-import { View,Text, Button, FlatList } from "react-native";
-import { COLORES } from "../../constantes/temas";
+import { FlatList } from "react-native";
 import ItemProductos from "../../componentes/itemproductos";
 import { useDispatch, useSelector } from "react-redux";
 import { filtrarProducto,selecProducto } from "../../store/acciones/productos.accion";

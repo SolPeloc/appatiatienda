@@ -6,9 +6,11 @@ import OrdenNavegacion from "./ordenes";
 import {Ionicons} from "@expo/vector-icons"
 import { COLORES } from "../constantes/temas";
 import { esANDROID } from "../utilidades";
+import { useSelector } from "react-redux";
 const BottomTab = createBottomTabNavigator()
 
 const Tabs = () =>{
+    const carrito = useSelector((estado) => estado.carrito.items)
     return(
         <BottomTab.Navigator
         initialRouteName="Tiendatab"
@@ -47,7 +49,13 @@ const Tabs = () =>{
                      size={22}
                      color={COLORES.negro}
                     />
-                )
+                ),
+                tabBarBadge:carrito.length === 0 ? null : carrito.length,
+                tabBarBadgeStyle:{
+                    backgroundColor: COLORES.gris,
+                    color:COLORES.blanco,
+                    fontSize: 14
+                }
             }}
             /> 
             <BottomTab.Screen

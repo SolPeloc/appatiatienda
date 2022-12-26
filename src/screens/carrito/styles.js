@@ -27,6 +27,15 @@ botonStyle:{
     justifyContent:"space-between",
     alignItems:"center"
 },
+desbotonStyle:{
+    backgroundColor:COLORES.blanco,
+    borderRadius:5,
+    paddingHorizontal:20,
+    paddingVertical:15,
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems:"center" 
+},
 textoConfirmado:{
   fontSize:14,
   fontFamily:"poppins-regular"

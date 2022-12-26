@@ -1,12 +1,15 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import TiendaNavegacion from "./tienda";
 import TabNavegacion from "./tabs";
+import { Autenticacion } from "../screens";
+import AutenticacionNavegacion from "./autenticacion"
+import { useSelector } from "react-redux";
 const AppNavigator = () =>{
-    
+const usuarioId = useSelector((estado) => estado.autenticacion.usuarioId)
     return(
         <NavigationContainer>
-            <TabNavegacion/>   
+            {usuarioId ?  <TabNavegacion/> : <AutenticacionNavegacion/> }
+            
         </NavigationContainer>
     )
 }
