@@ -4,6 +4,7 @@ import {Categorias, Producto,Productos} from"../screens"
 import { COLORES} from "../constantes/temas";
 import { esANDROID } from "../utilidades"
 
+
 const Stack = createNativeStackNavigator()
 
 const TiendaNavegacion = () =>{

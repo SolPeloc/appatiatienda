@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { styles } from "./styles";
-import { View,Text, KeyboardAvoidingView, TextInput, Button, TouchableOpacity } from "react-native";
+import { View,Text, KeyboardAvoidingView, TextInput, Button, TouchableOpacity,Image } from "react-native";
 import {COLORES} from "../../constantes/temas"
 import {esANDROID} from "../../utilidades/index"
 import { useDispatch } from "react-redux";
-import { registro } from "../../store/acciones/";
+import { registro, ingreso } from "../../store/acciones/";
 const Autenticacion = ({navegacion}) => {
     const despachador = useDispatch()
     const [eslogueado,seteslogueado] =  useState(true)
@@ -14,11 +14,12 @@ const Autenticacion = ({navegacion}) => {
     const mensaje = eslogueado ? "¿No tienes una cuenta?" : "¿Tienes una cuenta?"
     const mensajeBoton = eslogueado ? "Inicio Sesión" : "Registro"
     const enviar = () =>{
-         despachador(eslogueado ? null : registro(email, contraseña))
+         despachador(eslogueado ? ingreso(email,contraseña) : registro(email, contraseña))
     }
     return (
         <KeyboardAvoidingView style={styles.keyboardContainer} behavior = {esANDROID ? "height" : "padding"} enabled> 
         <View style={styles.container}>
+            <Image style={styles.imagen} source={require('../../../assets/imagenes/banner.png')}/>
             <Text style={styles.titulo}>{titulo}</Text>
             <Text style={styles.label}>Email</Text>
             <TextInput

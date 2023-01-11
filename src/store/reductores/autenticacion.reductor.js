@@ -14,9 +14,17 @@ const autenticacionReductor = (estado = estadoInicial,accion) => {
             token : accion.token,
             usuarioId : accion.usuarioId
         }
+        case INGRESO :
+            return{
+                ...estado,
+                token : accion.token,
+                usuarioId : accion.usuarioId
+            }
         default:
             return estado 
     }
+
+
     
 }
 

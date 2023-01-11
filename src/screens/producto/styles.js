@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     },
     imagen:{
         flex:0.5,
-        height:200,
-        width:200
+        height:250,
+        width:250
     }
 })

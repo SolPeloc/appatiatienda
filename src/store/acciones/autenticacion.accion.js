@@ -1,9 +1,9 @@
-import {  URL_AUT_REGISTRO} from "../../constantes/firebase";
+import {  URL_AUT_INGRESO, URL_AUT_REGISTRO} from "../../constantes/firebase";
 import { autenticacionTipos } from "../tipos";
 
 const {INGRESO, REGISTRO} = autenticacionTipos
 
-export const registro = (email,contraseña) =>{
+export const registro = (email,password) =>{
     return async (despachador) =>{
         try{
             const consulta = await fetch(URL_AUT_REGISTRO,{
@@ -11,7 +11,7 @@ export const registro = (email,contraseña) =>{
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     email,
-                    contraseña,
+                    password,
                     returnSecureToken : true,
                 })
 
@@ -27,9 +27,32 @@ export const registro = (email,contraseña) =>{
             })
 
         }catch (error) {
-           console.log(error)
+          throw error
         }
     }
 
 }
 
+export const ingreso = (email, password) =>{
+    return async(despachador) =>{
+        try{
+            const consulta = await fetch(URL_AUT_INGRESO,{
+                method: "POST",
+                headers:{'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    email,
+                    password,
+                    returnSecureToken : true,
+                })
+            })
+            const data = await consulta.json()
+            despachador({
+                type: INGRESO,
+                token : data.idToken,
+                usuarioId : data.localId
+            })
+        }catch (error){
+            throw error
+        }
+    }
+}

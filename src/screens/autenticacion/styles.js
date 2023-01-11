@@ -9,7 +9,11 @@ export const styles = StyleSheet.create({
        margin : 15,
        borderColor : COLORES.fondoClaro,
        borderWidth : 1,
-       borderRadius : 10,   
+       borderRadius : 10,  
+       flex:0.8,
+       justifyContent:"center",
+       alignItems:"center"
+      
     },
     keyboardContainer : {
         flex: 1,
@@ -57,8 +61,11 @@ export const styles = StyleSheet.create({
         fontSize:14,
         fontFamily: "poppins-regular",
         color: COLORES.texto,
-       
-        
-
+},
+imagen:{
+    height:150,
+    width:150,
+  
+    
 }
 })

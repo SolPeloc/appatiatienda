@@ -7,6 +7,7 @@ import {Ionicons} from "@expo/vector-icons"
 import { COLORES } from "../constantes/temas";
 import { esANDROID } from "../utilidades";
 import { useSelector } from "react-redux";
+import PerfilNavegacion from "./perfil";
 const BottomTab = createBottomTabNavigator()
 
 const Tabs = () =>{
@@ -71,7 +72,21 @@ const Tabs = () =>{
                 )
             }}
             />  
+              <BottomTab.Screen
+            name="PerfilTab"
+            component={PerfilNavegacion}
+            options={{
+                title:"Perfil",
+                tabBarIcon:({focused }) =>(
+                    <Ionicons name={focused? "person-circle" : "person-circle-outline"}
+                     size={22}
+                     color={COLORES.negro}
+                    />
+                )
+            }}
+            /> 
         </BottomTab.Navigator>
+        
     )
 }
 export default Tabs

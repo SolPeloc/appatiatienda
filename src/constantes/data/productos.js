@@ -5,15 +5,15 @@ export const PRODUCTOS = [
         titulo: 'Remera Su',
         descripcion: '100% algodón',
         precio: 2500,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-remera1.png")
     },
     {
         id: 2,
         categoriaId: 1,
         titulo: 'Remera Regan',
-        descripcion: '100% algodón, oversize',
+        descripcion: '100% algodón, crop',
         precio: 2800,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-remera2.png")
     },
     {
         id: 3,
@@ -27,9 +27,9 @@ export const PRODUCTOS = [
         id: 4,
         categoriaId: 2,
         titulo: 'Jean Clarita',
-        descripcion: 'wide leg negro',
+        descripcion: 'mom fit',
         precio: 10000,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-jean2.png")
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const PRODUCTOS = [
         titulo: 'Buzo Max',
         descripcion: '100% algodón, oversize',
         precio: 8500,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-buzo.png")
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ export const PRODUCTOS = [
         titulo: 'Buzo Hugo',
         descripcion: '100% algódon, crop',
         precio: 8000,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-buzo2.png")
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ export const PRODUCTOS = [
         titulo: 'Gorra Carol',
         descripcion: 'tela avión, para todo',
         precio: 2500,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-gorra.png")
     },
     
     ];
