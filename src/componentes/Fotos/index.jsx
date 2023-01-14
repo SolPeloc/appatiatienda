@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { styles } from "./styles";
 import * as  ImagePicker from "expo-image-picker"
-import { View,Text, Alert, Button, Image} from "react-native";
+import { View,Text, Alert, Button, Image, TouchableNativeFeedback} from "react-native";
 import { COLORES } from "../../constantes/temas";
-
+import {Ionicons} from "@expo/vector-icons"
 const Fotos = ({imagenSeleccion}) => {
 
     const tomarFoto = async () =>{
@@ -15,10 +15,10 @@ const Fotos = ({imagenSeleccion}) => {
             quality: 0.7,
             
         })
-        console.log(image)
-        seturlSeleccionada(image.uri)
-       imagenSeleccion(image.uri) 
-    
+        
+        seturlSeleccionada(image.assets[0].uri)
+       imagenSeleccion(image.assets[0].uri) 
+      
     } 
     const verifyPermissions = async() =>{
         const {status} = await ImagePicker.requestCameraPermissionsAsync()
@@ -34,18 +34,22 @@ const Fotos = ({imagenSeleccion}) => {
     const [urlSeleccionada,seturlSeleccionada] = useState(null)
      return ( 
         <View style={styles.container}>
+            <TouchableNativeFeedback   onPress={tomarFoto}> 
+            <Ionicons style={styles.icon} name='camera' size={20} />
+            </TouchableNativeFeedback>
+             <Button
+            title="Tomate una foto!"
+            color={COLORES.gris}
+           // onPress={tomarFoto}
+            />
             <View style={styles.previa}>
                     {!urlSeleccionada ? (
-                        <Text style={styles.titulo}> No hay imagen seleccionada</Text>
+                        <Text style={styles.titulo}> foto</Text>
                     ) : (
                         <Image style={styles.imagen} source={{uri : urlSeleccionada  }}/>
                     )}
                 </View>
-            <Button
-            title="Tomate una foto!"
-            color={COLORES.gris}
-            onPress={tomarFoto}
-            />
+           
         </View>
      )
 }

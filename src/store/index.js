@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { categoriaReductor,productosReductor, carritoReductor, ordenReductor, autenticacionReductor} from "./reductores";
+import { categoriaReductor,productosReductor, carritoReductor, ordenReductor, autenticacionReductor, perfilReductor} from "./reductores";
 import thunk from "redux-thunk";
 
 const RaizReductor = combineReducers({
@@ -7,7 +7,8 @@ const RaizReductor = combineReducers({
     productos : productosReductor,
     carrito : carritoReductor,
     ordenes : ordenReductor,
-    autenticacion : autenticacionReductor
+    autenticacion : autenticacionReductor,
+    perfil : perfilReductor
 })
 
 export default createStore(RaizReductor, applyMiddleware(thunk))

@@ -8,11 +8,10 @@ export const styles = StyleSheet.create({
        
     },
     previa:{
-        width:"80%",
-        height:300,
+        width:"100%",
+        height:200,
         marginBottom: 20,
-        marginRight:100,
-        marginLeft:50,
+        marginTop:20,
         justifyContent:"center",
         alignItems:"center",
         borderColor:COLORES.gris,

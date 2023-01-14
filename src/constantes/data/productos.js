@@ -21,7 +21,7 @@ export const PRODUCTOS = [
         titulo: 'Jean Montana',
         descripcion: 'clásico Oxford',
         precio: 8000,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/mujer-jean1.png")
     },
     {
         id: 4,
@@ -50,16 +50,16 @@ export const PRODUCTOS = [
     {
         id: 7,
         categoriaId: 4,
-        titulo: 'Anteojos Sun',
-        descripcion: 'Para sol, oscuro',
+        titulo: 'Sombrero Mirna',
+        descripcion: 'Sombrero de paja con detalle de pañuelo',
         precio: 6500,
-        imagen:require("../../../assets/imagenes/mujer-jean.png")
+        imagen:require("../../../assets/imagenes/acc-sombrero.png")
     },
     {
         id: 8,
         categoriaId: 4,
         titulo: 'Gorra Carol',
-        descripcion: 'tela avión, para todo',
+        descripcion: 'tela avión, color celeste',
         precio: 2500,
         imagen:require("../../../assets/imagenes/mujer-gorra.png")
     },

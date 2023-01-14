@@ -76,7 +76,7 @@ const Tabs = () =>{
             name="PerfilTab"
             component={PerfilNavegacion}
             options={{
-                title:"Perfil",
+                title:"perfil",
                 tabBarIcon:({focused }) =>(
                     <Ionicons name={focused? "person-circle" : "person-circle-outline"}
                      size={22}
