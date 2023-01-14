@@ -6,6 +6,7 @@ import { styles } from "./styles";
 import { useState } from "react";
 import { useDispatch} from "react-redux";
 import { agregarFoto } from "../../store/acciones/perfil.accion";
+import { guardarFoto } from "../../store/acciones/perfil.accion";
 const Perfil= ({navigation}) =>{
     const [titulo, settitulo] = useState("");
     const [imagen, setimagen] = useState(null)
@@ -13,7 +14,7 @@ const Perfil= ({navigation}) =>{
   const despachador = useDispatch()
 
   const enviar = () =>{
-    despachador(agregarFoto({titulo,imagen})) 
+    despachador(guardarFoto({titulo,imagen})) 
   navigation.navigate("ListaFotos") 
 console.log({titulo,imagen})
 }
@@ -30,7 +31,7 @@ const imagenSeleccion = (uri) =>{
             <Text style={styles.titulo}>Nueva foto</Text>
             <ScrollView style={styles.containerInput}>
                 <TextInput
-                placeholder="ponle nombre a tu foto"
+                placeholder="ponle nombre a tu outfit"
                 style={styles.input}
                 onChangeText={cambio}
                 />

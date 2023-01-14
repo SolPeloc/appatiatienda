@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import * as  ImagePicker from "expo-image-picker"
 import { View,Text, Alert, Button, Image, TouchableNativeFeedback} from "react-native";
 import { COLORES } from "../../constantes/temas";
-import {Ionicons} from "@expo/vector-icons"
+
 const Fotos = ({imagenSeleccion}) => {
 
     const tomarFoto = async () =>{
@@ -34,13 +34,10 @@ const Fotos = ({imagenSeleccion}) => {
     const [urlSeleccionada,seturlSeleccionada] = useState(null)
      return ( 
         <View style={styles.container}>
-            <TouchableNativeFeedback   onPress={tomarFoto}> 
-            <Ionicons style={styles.icon} name='camera' size={20} />
-            </TouchableNativeFeedback>
              <Button
             title="Tomate una foto!"
             color={COLORES.gris}
-           // onPress={tomarFoto}
+            onPress={tomarFoto}
             />
             <View style={styles.previa}>
                     {!urlSeleccionada ? (

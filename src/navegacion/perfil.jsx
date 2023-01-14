@@ -30,7 +30,7 @@ const PerfilNavegacion = () =>{
                 headerRight:() =>(
                   <TouchableOpacity 
                   onPress={()=> navigation.navigate("Perfil")}>
-                  <Ionicons name = "add-circle-outline" size = {25} color = {COLORES.negro}/>
+                   <Ionicons  name='camera' size={20} />
                   </TouchableOpacity>
                  )
                 })} 

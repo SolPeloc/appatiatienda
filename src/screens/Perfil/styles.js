@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         marginTop:20,
         fontFamily:"poppins-bold",
         textAlign:"center",
-        fontSize:20,
+        fontSize:17,
         marginBottom:20
     },
     containerInput:{

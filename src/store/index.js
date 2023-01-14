@@ -8,7 +8,8 @@ const RaizReductor = combineReducers({
     carrito : carritoReductor,
     ordenes : ordenReductor,
     autenticacion : autenticacionReductor,
-    perfil : perfilReductor
+    perfil : perfilReductor,
+    
 })
 
 export default createStore(RaizReductor, applyMiddleware(thunk))

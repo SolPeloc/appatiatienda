@@ -7,4 +7,12 @@ export const styles = StyleSheet.create({
     alignItems:"center"
     
   },
+  titulo:{
+    paddingTop:20,
+    fontSize:16,
+    fontFamily: "poppins-italic"
+  },
+contenido:{
+
+}
 });
