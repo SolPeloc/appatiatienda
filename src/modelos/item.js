@@ -1,6 +1,6 @@
 class Item {
     constructor(id,titulo, imagen){
-        this.id = id.toString(),
+        this.id = id,
         this.titulo = titulo,
         this.imagen = imagen
     }

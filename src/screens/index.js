@@ -6,3 +6,4 @@ export {default as Ordenes} from "./ordenes";
 export {default as Autenticacion} from "./autenticacion"
 export {default as Perfil} from "./Perfil"
 export {default as ListaFotos} from "./lista-fotos"
+export {default as DetalleFotos} from "./detalle-fotos"

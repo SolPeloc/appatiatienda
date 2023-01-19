@@ -2,9 +2,10 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { COLORES } from "../constantes/temas";
 import { esANDROID } from "../utilidades";
-import {ListaFotos, Perfil} from "../screens"
+import {ListaFotos, Perfil, DetalleFotos} from "../screens"
 import { TouchableOpacity } from "react-native";
 import {Ionicons} from "@expo/vector-icons"
+
 const Stack = createNativeStackNavigator()
 
 const PerfilNavegacion = () =>{
@@ -40,7 +41,11 @@ const PerfilNavegacion = () =>{
         component={Perfil}
         options={{ title: "Nueva Foto" }}
       />
-
+        <Stack.Screen
+        name="DetalleFotos"
+        component={DetalleFotos}
+        options={{ title: "Detalle de tu Outfit ATIA" }}
+      />
 
         </Stack.Navigator>
     )

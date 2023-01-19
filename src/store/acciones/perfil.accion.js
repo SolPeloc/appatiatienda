@@ -1,31 +1,44 @@
 import { perfilTipos } from "../tipos";
-import * as FileSystem from "expo-file-system"
+import { insertarFoto, obtenerFotos } from "../../db";
 
-const {AGREGAR_FOTO, GUARDAR_FOTO} =  perfilTipos
+const {AGREGAR_FOTO, GUARDAR_FOTO,SET_FOTOS} =  perfilTipos
 
 export const agregarFoto = (titulo, imagen) => ( {
     type : AGREGAR_FOTO,
     lista : titulo, imagen
 }) 
 
- export const guardarFoto = ({titulo,imagen}) =>{
-     return async(despachador) =>{
-                                //const fileName = image.split("/").pop()
-                                //const newPath = FileSystem.documentDirectory + fileName
-
-       try{
-                    //await FileSystem.moveAsync({
-                    // from: image,
-                    // to: newPath
-                // })
-
-     console.log(imagen,"imagen")
-      }
-       catch (error){
+export const setFoto = () =>({
+  type: SET_FOTOS,
+  lista 
+})
+export const guardarFoto = ({titulo,imagen}) =>{
+    return async(despachador) =>{           
+      try{     
+          const result = await insertarFoto(titulo,imagen)
+          console.warn(result)
+        despachador(agregarFoto({id:result.insertId, titulo,imagen} ))
+      
+    }
+        catch (error){
         console.log(error)
-       }
-      despachador(agregarFoto({titulo,imagen }))
-     }
+        throw error
+      }  
+    }   
+}
 
-     
- }
+export const cargarFotos = () => {
+  return async(despachador) => {
+    try {
+      const result = await obtenerFotos()
+      console.log(result)
+      despachador({
+        type: SET_FOTOS,
+        lista:result?.rows?._array
+      })
+    } catch (error) {
+      console.warn(error);
+      throw error;
+    }   
+  }
+}

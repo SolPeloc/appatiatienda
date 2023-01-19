@@ -9,15 +9,15 @@ const Fotos = ({imagenSeleccion}) => {
     const tomarFoto = async () =>{
         const isCameraPermissions = await verifyPermissions()
         if (!isCameraPermissions) return
-        const image = await ImagePicker.launchCameraAsync({
+        const imagen = await ImagePicker.launchCameraAsync({
             allowsEditing: true,
             aspect: [16,9],
             quality: 0.7,
             
         })
-        
-        seturlSeleccionada(image.assets[0].uri)
-       imagenSeleccion(image.assets[0].uri) 
+       
+        seturlSeleccionada(imagen.assets[0].uri)
+       imagenSeleccion(imagen.assets[0].uri) 
       
     } 
     const verifyPermissions = async() =>{

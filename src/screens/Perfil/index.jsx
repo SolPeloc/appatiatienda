@@ -16,7 +16,7 @@ const Perfil= ({navigation}) =>{
   const enviar = () =>{
     despachador(guardarFoto({titulo,imagen})) 
   navigation.navigate("ListaFotos") 
-console.log({titulo,imagen})
+//console.log({titulo,imagen})
 }
 const cambio = (text) =>{
   settitulo(text)   
