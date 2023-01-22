@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
         borderRadius:10,
         marginHorizontal:20,
         marginVertical:10,
-        height: 160
+        height: 160,
     },
     contenidoContainer:{
         flex:1,
@@ -26,12 +26,12 @@ export const styles = StyleSheet.create({
     titulo:{
         fontSize:18,
         fontFamily:"poppins-bold",
-        color:COLORES.texto
+        color:COLORES.texto,
     },
     imagen:{
-       width:80,
-       height:80,
-       borderRadius:10
+        width:80,
+        height:80,
+        borderRadius:10,
     },
     
 })
