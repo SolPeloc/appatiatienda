@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptativo-iconoatia.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.solpeloc.appatiatienda"
     },
     "web": {
       "favicon": "./assets/favicon-atia.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a41707a3-397b-4220-a16d-ed9a8ed8dac0"
+      }
     }
   }
 }
