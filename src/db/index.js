@@ -41,3 +41,4 @@ export const obtenerFotos = () => {
     })
     return promesa
 }
+

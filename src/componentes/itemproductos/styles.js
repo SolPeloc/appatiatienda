@@ -14,23 +14,18 @@ export const styles = StyleSheet.create({
     item:{
         flex:1,
         justifyContent:"space-around",
-
+        alignItems: "center"
     },
-titulo:{
-   fontSize:16,
-   fontFamily:"poppins-italic"
-},
-detalleContainer:{
-  flexDirection:"row",
-  justifyContent:"space-between"
-},
-
-precio:{
-    fontFamily:"poppins-bold",
-    fontSize:18,
-},
-weight:{
-
-},
-
+    titulo:{
+        fontSize:16,
+        fontFamily:"poppins-italic"
+    },
+    detalleContainer:{
+        flexDirection:"row",
+        justifyContent:"space-between"
+    },
+    precio:{
+        fontFamily:"poppins-bold",
+        fontSize:18,
+    },
 })

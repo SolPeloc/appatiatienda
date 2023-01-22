@@ -11,43 +11,42 @@ const Stack = createNativeStackNavigator()
 const PerfilNavegacion = () =>{
     return(
         <Stack.Navigator
-        initialRouteName="ListaFotos"
-        screenOptions={{
-            headerStyle: {
-                backgroundColor: esANDROID? COLORES.fondoClaro : COLORES.gris
-            },
-            headerTintColor: COLORES.texto,
-            headerTitleStyle: {
-                fontFamily: "poppins-bold"
-            },
-            presentation: "card",
-            headerBackTitle:""
-        }}
-        >
+          initialRouteName="ListaFotos"
+          screenOptions={{
+              headerStyle: {
+                  backgroundColor: esANDROID? COLORES.fondoClaro : COLORES.gris
+              },
+              headerTintColor: COLORES.texto,
+              headerTitleStyle: {
+                  fontFamily: "poppins-bold"
+              },
+              presentation: "card",
+              headerBackTitle:""
+          }}
+          >
+            <Stack.Screen
+              name="ListaFotos"
+              component={ListaFotos} options={ ({navigation}) =>({
+                  title: "Fotos",
+                  headerRight:() =>(
+                    <TouchableOpacity 
+                    onPress={()=> navigation.navigate("Perfil")}>
+                    <Ionicons  name='camera' size={20} />
+                    </TouchableOpacity>
+                  )
+                  })} 
+            /> 
+            <Stack.Screen
+              name="Perfil"
+              component={Perfil}
+              options={{ title: "Nueva Foto" }}
+            />
           <Stack.Screen
-            name="ListaFotos"
-            component={ListaFotos} options={ ({navigation}) =>({
-                title: "Fotos",
-                headerRight:() =>(
-                  <TouchableOpacity 
-                  onPress={()=> navigation.navigate("Perfil")}>
-                   <Ionicons  name='camera' size={20} />
-                  </TouchableOpacity>
-                 )
-                })} 
-           /> 
-           <Stack.Screen
-        name="Perfil"
-        component={Perfil}
-        options={{ title: "Nueva Foto" }}
-      />
-        <Stack.Screen
-        name="DetalleFotos"
-        component={DetalleFotos}
-        options={{ title: "Detalle de tu Outfit ATIA" }}
-      />
-
-        </Stack.Navigator>
+            name="DetalleFotos"
+            component={DetalleFotos}
+            options={{ title: "Detalle de tu Outfit ATIA" }}
+          />
+      </Stack.Navigator>
     )
 }
 export default PerfilNavegacion

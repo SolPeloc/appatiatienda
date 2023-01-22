@@ -9,9 +9,8 @@ const ItemFotos = ({id,titulo,imagen, seleccionado}) =>{
             <Image style={styles.imagen} source={{uri:imagen}}/>
             <View style={styles.infoContainer}>
                 <Text style={styles.titulo}>{titulo}</Text>
-                
             </View>
-        </TouchableOpacity>
+        </TouchableOpacity>   
     )
 }
 export default ItemFotos

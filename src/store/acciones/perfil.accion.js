@@ -1,5 +1,5 @@
 import { perfilTipos } from "../tipos";
-import { insertarFoto, obtenerFotos } from "../../db";
+import { insertarFoto, obtenerFotos} from "../../db";
 
 const {AGREGAR_FOTO, GUARDAR_FOTO,SET_FOTOS} =  perfilTipos
 

@@ -22,10 +22,7 @@ const autenticacionReductor = (estado = estadoInicial,accion) => {
             }
         default:
             return estado 
-    }
-
-
-    
+    }   
 }
 
 export default autenticacionReductor

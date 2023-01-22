@@ -32,7 +32,7 @@ export const confirmarCarrito = (items,total) =>{
                             type: CONFIRMAR_ORDEN,
                             resultado
                         });
-                } catch (error){
+                    } catch (error){
                     console.log(error)
                 }
     }

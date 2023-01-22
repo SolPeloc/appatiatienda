@@ -8,25 +8,23 @@ const Stack = createNativeStackNavigator()
 const OrdenNavegacion = () =>{
     return(
         <Stack.Navigator
-        initialRouteName="Ordenes"
-        screenOptions={{
-            headerStyle: {
-                backgroundColor: esANDROID? COLORES.fondoClaro : COLORES.gris
-            },
-            headerTintColor: COLORES.texto,
-            headerTitleStyle: {
-                fontFamily: "poppins-bold"
-            },
-            presentation: "card",
-            headerBackTitle:""
-        }}
-        >
-          <Stack.Screen
-            name="Ordenes"
-            component={Ordenes}
-           /> 
-
-
+            initialRouteName="Ordenes"
+            screenOptions={{
+                headerStyle: {
+                    backgroundColor: esANDROID? COLORES.fondoClaro : COLORES.gris
+                },
+                headerTintColor: COLORES.texto,
+                headerTitleStyle: {
+                    fontFamily: "poppins-bold"
+                },
+                presentation: "card",
+                headerBackTitle:""
+            }}
+            >
+            <Stack.Screen
+                name="Ordenes"
+                component={Ordenes}
+            /> 
         </Stack.Navigator>
     )
 }

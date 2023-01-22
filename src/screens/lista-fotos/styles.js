@@ -10,5 +10,4 @@ export const styles = StyleSheet.create({
       fontFamily: "poppins-italic",
       textAlign:"center"
     },
-
 });

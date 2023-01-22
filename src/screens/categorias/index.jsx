@@ -5,13 +5,13 @@ import { useSelector,useDispatch } from "react-redux";
 import ItemCategorias from "../../componentes/itemcategorias";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { selecCategoria } from "../../store/acciones/";
+
 const Categorias = ({navigation}) =>{
     const despachador = useDispatch()
     const categorias = useSelector((state)=> state.categoria.categorias) 
     const seleccionado = (item) =>{
         despachador(selecCategoria(item.id))
-   
-        navigation.navigate("Productos", {titulo: item.title } )
+        navigation.navigate("Productos", {titulo: item.title})
     }
     const renderItem = ({item}) =>(<ItemCategorias item={item} seleccionado={seleccionado}/>)
     return(

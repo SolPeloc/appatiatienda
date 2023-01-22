@@ -17,32 +17,25 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 1.41,
-        
         elevation: 5,
         margin:10
     },
-    cabeceraContainer:{
-        
+    fecha:{
+        fontSize:14,
+        fontFamily:"poppins-italic"
     },
-fecha:{
-   fontSize:14,
-   fontFamily:"poppins-italic"
-},
-contenidoContainer:{
-  flex:1,
-  flexDirection:"row",
-  flexWrap:"wrap",
-  justifyContent:"space-between",
-  alignItems:"center",
- 
-},
-contenido:{
-  
-},
-total:{
-    fontSize:14,
-    fontFamily:"poppins-bold",
-    color: COLORES.texto,
-    marginVertical:10
-}
+    contenidoContainer:{
+        flex:1,
+        flexDirection:"row",
+        flexWrap:"wrap",
+        justifyContent:"space-between",
+        alignItems:"center",
+    
+    },
+    total:{
+        fontSize:14,
+        fontFamily:"poppins-bold",
+        color: COLORES.texto,
+        marginVertical:10
+    }
 })

@@ -14,7 +14,6 @@ export const registro = (email,password) =>{
                     password,
                     returnSecureToken : true,
                 })
-
             })
             if (!consulta.ok){
                 throw new Error ("Algo salió mal")
@@ -25,12 +24,10 @@ export const registro = (email,password) =>{
                 token : data.idToken,
                 usuarioId : data.localId
             })
-
         }catch (error) {
-          throw error
+        throw error
         }
     }
-
 }
 
 export const ingreso = (email, password) =>{

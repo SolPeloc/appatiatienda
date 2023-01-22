@@ -7,32 +7,28 @@ const estadoInicial = {
 }
 
 const perfilReductor = (estado =  estadoInicial, accion) =>{
-  switch(accion.type){
-    case  AGREGAR_FOTO :
-
-    const nuevaFoto = new Item (accion.lista.id, accion.lista.titulo, accion.lista.imagen)
-       return{
-        ...estado,
-        lista :  estado.lista.concat(nuevaFoto)
-       }
-
-    case GUARDAR_FOTO :
-      return{
-        ...estado,
-        lista: estado.lista
-      }
-      case SET_FOTOS :
-        return {
+    switch(accion.type){
+      case  AGREGAR_FOTO :
+      const nuevaFoto = new Item (accion.lista.id, accion.lista.titulo, accion.lista.imagen)
+        return{
           ...estado,
-          lista : accion.lista.map(item => new Item(item.id,item.titulo,item.imagen))
+          lista :  estado.lista.concat(nuevaFoto)
         }
-    
-    default:
-      return estado
-  } 
-  
-  
-  }
+      case GUARDAR_FOTO :
+        return{
+          ...estado,
+          lista: estado.lista
+        }
+        case SET_FOTOS :
+          return {
+            ...estado,
+            lista : accion.lista.map(item => new Item(item.id,item.titulo,item.imagen))
+          }
+      
+      default:
+        return estado
+    } 
+}
 
   
 

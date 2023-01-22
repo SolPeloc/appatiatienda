@@ -19,8 +19,8 @@ init()
 export default function App() {
 const [loaded] = useFonts({
   "poppins-regular": require("../assets/fonts/Poppins-Regular.ttf"),
-   "poppins-bold" : require("../assets/fonts/Poppins-Bold.ttf"),
-   "poppins-italic" : require("../assets/fonts/Poppins-Italic.ttf"),
+  "poppins-bold" : require("../assets/fonts/Poppins-Bold.ttf"),
+  "poppins-italic" : require("../assets/fonts/Poppins-Italic.ttf"),
 })
 if (!loaded){
   return(
@@ -33,17 +33,14 @@ if (!loaded){
         <Provider store={store}>
           <AppNavigator/>
         </Provider>
-
-   )
-   
-    
+)   
 } 
 
 
 const styles = StyleSheet.create({
-     container:{
+    container:{
       flex: 1,
       justifyContent:"center",
       alignItems:"center"
-     }
+    }
 })

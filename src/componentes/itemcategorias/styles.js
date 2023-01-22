@@ -27,5 +27,11 @@ export const styles = StyleSheet.create({
         fontSize:18,
         fontFamily:"poppins-bold",
         color:COLORES.texto
-    }
+    },
+    imagen:{
+       width:80,
+       height:80,
+       borderRadius:10
+    },
+    
 })

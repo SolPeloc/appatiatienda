@@ -4,7 +4,6 @@ import {Categorias, Producto,Productos} from"../screens"
 import { COLORES} from "../constantes/temas";
 import { esANDROID } from "../utilidades"
 
-
 const Stack = createNativeStackNavigator()
 
 const TiendaNavegacion = () =>{
@@ -25,27 +24,26 @@ const TiendaNavegacion = () =>{
             >
             
             <Stack.Screen 
-            name="Categorias" 
-            component={Categorias}
-            options={{
-                headerShown:false
-            }}
+                name="Categorias" 
+                component={Categorias}
+                options={{
+                    headerShown:false
+                }}
             />
             <Stack.Screen 
-            name="Productos" 
-            component={Productos}
-            options={({ route }) => ({
-                title: route.params.titulo,
-              })}
-            
+                name="Productos" 
+                component={Productos}
+                options={({ route }) => ({
+                    title: route.params.titulo,
+                })}     
             />
             <Stack.Screen 
-            name="Producto" 
-            component={Producto}
-            options={({route}) => ({
-                title: route.params.titulo
-                
-            })}
+                name="Producto" 
+                component={Producto}
+                options={({route}) => ({
+                    title: route.params.titulo
+                    
+                })}
             />
         </Stack.Navigator>
     )

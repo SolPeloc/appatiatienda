@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
         fontFamily:"poppins-bold",
         fontSize:20,
         color:COLORES.texto
-       
     },
     listaContenedor:{
         flex:1

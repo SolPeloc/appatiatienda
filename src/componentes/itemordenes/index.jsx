@@ -3,6 +3,7 @@ import { styles } from "./styles";
 import { View,Text,TouchableOpacity } from "react-native";
 import {formatoFecha} from "../../utilidades/index"
 import {Ionicons} from "@expo/vector-icons"
+
 const ItemOrdenes = ({item, borrar}) =>{
     return(
         <View style={styles.container}>
@@ -13,7 +14,7 @@ const ItemOrdenes = ({item, borrar}) =>{
                 <View style={styles.contenido}>
                     <Text style={styles.total}>${item.total}</Text>
                 </View>
-                <TouchableOpacity onPress={()=>borrar(item.id)} >
+                    <TouchableOpacity onPress={()=>borrar(item.id)} >
                         <Ionicons name="trash"size={20} />  
                     </TouchableOpacity>  
             </View>
